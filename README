@@ -1,0 +1,8 @@
+
+# Construimos la imagen
+docker build -t icalculadora -f Dockerfile .
+
+# Corremos el contenedor en el puerto 8082
+docker run -d -p 8082:80 --name contenedorcalculadora icalculadora
+
+
