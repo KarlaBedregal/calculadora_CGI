@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Avanzada</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Calculadora</title>
 </head>
 <body>
+
+<div class="calculadora">
     <h1>Calculadora</h1>
-    <form action="/cgi-bin/calculadora.pl" method="post">
-        <input type="text" name="expresion" placeholder="Ingresa la expresión" required>
-        <button type="submit">Calcular</button>
+    <form action="/cgi-bin/calculadora.pl" method="GET">
+        <input type="text" name="operacion" placeholder="Ingrese: (4+5)/5" class="pantalla">
+        <div class="resultado">
+            <button type="submit" class="calcular">Calcular</button>
+        </div>    
     </form>
+</div>
+
+<!-- Sección de pie de página -->
+<footer class="footer">
+    <div class="links"> <!-- Cambiado a div -->
+        <a href="https://validator.w3.org/#validate_by_input" class="image-link" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="img/W3C_HTML5_certified.png" alt="Markup Validation" />
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" class="image-link" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="img/Valid_CSS_(blue).svg.png" alt="CSS Validation" />
+        </a>
+        <a href="https://www.w3.org/WAI/test-evaluate/tools/list/" class="image-link" target="_blank">
+            <img style="border:0;width:88px;height:31px" src="img/wcag2.2AAA-blue.png" alt="Web Accessibility" />
+        </a>
+    </div>
+    <div>
+        Bedregal Coaguila, Karla Miluska &copy; Laboratorio 06 - Grupo D
+    </div>
+</footer>
+
+
+
 </body>
 </html>

@@ -21,7 +21,8 @@ RUN mkdir -p /usr/lib/cgi-bin /var/www/html/css
 # Copiamos los archivos de nuestro proyecto al contenedor
 COPY ./cgi-bin/ /usr/lib/cgi-bin/
 COPY ./index.html /var/www/html/
-COPY ./styles.css /var/www/html/css/
+COPY ./styles.css /var/www/html/
+COPY img /var/www/html/img
 
 # Aseguramos que los scripts Perl en cgi-bin sean ejecutables
 RUN chmod +x /usr/lib/cgi-bin/*.pl
