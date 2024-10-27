@@ -1,42 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>  
+<html lang="es">  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">  <!--Admite carácteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Contenido en móviles-->
     <title>Calculadora Avanzada</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!--Link/dirección del css-->
 </head>
+<!--Cuerpo-->
 <body>
 
-<div class="calculadora">
-    <h1>Calculadora</h1>
-    <form action="/cgi-bin/calculadora.pl" method="GET">
-        <input type="text" name="operacion" placeholder="Ingrese: (4+5)/5" class="pantalla">
-        <div class="resultado">
-            <button type="submit" class="calcular">Calcular</button>
+<div class="calculadora"> <!--Creamos un contenedor para el título y formulario de la calculadora-->
+    <h1>Calculadora</h1> 
+    <form action="/cgi-bin/calculadora.pl" method="GET"> <!--Un formulario que envía la operación ingresada al archivo CGI para ser procesada-->
+        <input type="text" name="operacion" placeholder="Ingrese: (4+5)/5" class="pantalla"> <!--El campo de texto en el que el usuario va a ingresar la operación-->
+        <div class="resultado"> 
+            <button type="submit" class="calcular">Calcular</button> <!--Botón para calcular-->
         </div>    
     </form>
 </div>
 
-<!-- Sección de pie de página -->
+<!-- Pie de página -->
 <footer class="footer">
-    <div class="links"> <!-- Cambiado a div -->
+    <div class="links"> <!-- Enlaces de imagen que validan los códigos -->
         <a href="https://validator.w3.org/#validate_by_input" class="image-link" target="_blank">
-            <img style="border:0;width:88px;height:31px" src="img/W3C_HTML5_certified.png" alt="Markup Validation" />
+            <img style="border:0;width:88px;height:31px" src="img/W3C_HTML5_certified.png" alt="Markup Validation" >
         </a>
         <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" class="image-link" target="_blank">
-            <img style="border:0;width:88px;height:31px" src="img/Valid_CSS_(blue).svg.png" alt="CSS Validation" />
+            <img style="border:0;width:88px;height:31px" src="img/Valid_CSS_(blue).svg.png" alt="CSS Validation" >
         </a>
         <a href="https://www.w3.org/WAI/test-evaluate/tools/list/" class="image-link" target="_blank">
-            <img style="border:0;width:88px;height:31px" src="img/wcag2.2AAA-blue.png" alt="Web Accessibility" />
+            <img style="border:0;width:88px;height:31px" src="img/wcag2.2AAA-blue.png" alt="Web Accessibility" >
         </a>
     </div>
     <div>
         Bedregal Coaguila, Karla Miluska &copy; Laboratorio 06 - Grupo D
     </div>
 </footer>
-
-
-
 </body>
 </html>

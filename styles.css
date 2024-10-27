@@ -11,85 +11,78 @@ body {
     flex-direction: column; /* Organizar en columnas */
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Asegura que el body tenga al menos la altura del viewport */
+    min-height: 100vh; /* El body tiene al menos la altura del viewport */
     background-color: #000; /* Fondo negro */
 }
 
-/* Contenedor de la calculadora */
-.calculadora {
+.calculadora { /* Contenedor de la calculadora */
     width: 90%;
     max-width: 400px;
     padding: 30px;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0); 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaciado entre elementos */
-    position: relative; /* Para el posicionamiento de la imagen */
+    gap: 20px; /* Espacio entre elementos */
+    position: relative; 
 }
 
-/* Pantalla de la calculadora */
-.pantalla {
+.pantalla { /* Pantalla de la calculadora */
     width: 100%;
     height: 60px;
-    background-color: #000; /* Color de fondo negro */
+    background-color: #000; /* Color de fondo negro, para que cuadre con la imagen*/
     color: #fff; /* Color del texto */
-    text-align: left; /* Alineación a la derecha */
-    padding: 15px;
-    border: 2px solid #2e4aff; /* Borde color cian */
+    text-align: left; /* Alineación a la izquierda */
+    padding: 15px; 
+    border: 2px solid #2e4aff; /* Borde */
     border-radius: 10px;
-    font-size: 1.8em;
+    font-size: 1.8em; /* Tamaño de la letra */
     outline: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 115px;
+    margin-top: 115px; 
 }
 
-/* Estilo del contenedor de resultado para alinear el botón */
-.resultado {
+.resultado { /* Estilo del contenedor para el resultado */
     display: flex;
-    justify-content: flex-end; /* Alinear el botón a la derecha */
+    justify-content: flex-end; /* Alineamos el botón a la derecha */
     width: 100%; /* Ocupa el ancho completo del contenedor */
-    margin-top: 398px;
+    margin-top: 398px; /* Acomodamos para que cuadre con la imagen */
     margin-left: 45px;
 }
 
-/* Estilo del botón de calcular */
-.calcular {
-    padding: 20px 35px; /* Espaciado en los lados */
-    font-size: 1.3em;
+.calcular {  /* Estilo del botón de calcular */
+    padding: 20px 35px; /* Espacio en los lados */
+    font-size: 1.3em; /* Tamaño de la letra */
     color: #fff;
-    background-color: #2e4aff; /* Color cian */
+    background-color: #2e4aff; 
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer; /*Para que cuando pasemos por encima el cursor, se vuelva puntero*/
     transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo al hacer hover en el botón de calcular */
-.calcular:hover {
-    background-color: #000000; /* Color más oscuro */
+.calcular:hover { /* Estilo al hacer hover en el botón de calcular */
+    background-color: #000000; 
     transform: translateY(-2px); /* Efecto de elevación */
 }
 
-/* Estilo del título */
-h1 {
+h1 {  /* Estilo del título */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
     margin-top: 20px;
-    padding: 10px 20px; /* Espaciado alrededor del texto */
+    padding: 10px 20px; /* Espacio alrededor del texto */
     background-color: rgba(46, 74, 255, 0.7); /* Fondo semitransparente */
     border-radius: 10px; /* Bordes redondeados */
 }
 
-/* Imagen de fondo en el body */
-body::before {
-    content: '';
-    position: absolute;
+body::before { /* Imagen de fondo en el body */
+    content: ''; /*Contenido vacío para que el pseudo-elemento se muestre y permita usar la imagen */
+    position: absolute; /* Posiciona el pseudo-elemento permitiendo el control de su posición */
     top: 0;
     left: 0;
     width: 1850px; /* Ancho fijo de la imagen */
@@ -97,78 +90,74 @@ body::before {
     background-image: url('https://i.pinimg.com/736x/f8/65/9e/f8659ed87721b7b3443d7db69fbf525c.jpg');
     background-repeat: no-repeat; /* No repetir la imagen */
     background-position: center; /* Centrar la imagen */
-    background-size: 1200px auto;
+    background-size: 1200px auto; /*Ajusta el ancho y el alto se ajusta automaticamente*/
     z-index: -1; /* Coloca la imagen detrás del contenido */
 }
 
-.calculadora h1,
+.calculadora h1, /* Que astos elementos aparezcan por encima de la imagen de fondo */
 .calculadora .pantalla,
 .calculadora .calcular {
     position: relative; /* Para que el contenido esté por encima de la imagen */
-    z-index: 1; /* Asegúrate de que esté por encima de la imagen de fondo */
+    z-index: 1; /* Índice de apilamiento, para que se muestren por encima (la img tiene -1, por lo que nos aseguramos que aparezca encima, en primer plano) */
 }
 
-/* Estilos del pie de página */
-.footer {
+.footer { /* Estilos del pie de página (entrada)*/
     display: flex;
     justify-content: center; /* Centrar imágenes en el footer */
-    align-items: center; /* Alinear verticalmente */
-    padding: 20px; /* Espaciado alrededor */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el footer */
+    align-items: center; /* Alineamos verticalmente */
+    padding: 20px; /* Espacio alrededor */
+    background-color: rgba(0, 0, 0, 0.8); 
     position: relative;
     width: 100%; /* Ocupa todo el ancho */
     margin-top: auto; /* Empuja el footer al final */
 }
 
-/* Estilos del pie de página */
-.footer {
+.footer { 
     display: flex;
     flex-direction: column; /* Mantener el footer en columna */
     justify-content: center; /* Centrar verticalmente */
     align-items: center; /* Centrar horizontalmente */
-    padding: 20px; /* Espaciado alrededor */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    color: white; /* Color del texto */
+    padding: 20px; /* Espacio alrededor */
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; /* Color para texto */
 }
 
 .footer .links {
     display: flex; /* Usar flexbox para los enlaces */
     justify-content: center; /* Centrar horizontalmente los enlaces */
-    gap: 10px; /* Espaciado entre los enlaces */
-    margin-bottom: 10px; /* Espaciado inferior */
+    gap: 10px; /* Espacio entre los enlaces */
+    margin-bottom: 10px; /* Espacio inferior */
 }
 
 .footer .links img {
-    max-height: 31px; /* Asegurar que las imágenes no excedan la altura */
+    max-height: 31px; /* Que las imágenes no sean muy altas */
     width: auto; /* Mantener la proporción */
-    margin-top: -200px;
+    margin-top: -200px; 
 }
 
-/* Ajuste para la caja de resultado */
-.resultado-caja {
+.resultado-caja { /* Estilos para la cajita del resultado */
     width: 80%; /* Ancho más largo */
     color: #fafafa;
-    font-size: 1.2em;
+    font-size: 1.2em; /* Tamaño de letra */
     max-width: 600px; /* Máximo ancho */
-    border: 2px solid #fafafa;
-    border-radius: 10px;
+    border: 2px solid #fafafa; 
+    border-radius: 10px; /* Borde curvado de la cajita*/
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
     margin: 20px auto; /* Centrado automático */
-    text-align: center;
+    text-align: center; /* Texto centrado */
 }
 
-/* Pie de página: imágenes en fila horizontal */
-.footer-links {
-    display: flex;
-    flex-direction: row; /* Garantiza que los elementos estén en fila */
+.footer-links { /* Pie de página: imágenes en fila horizontal */
+    display: flex; 
+    flex-direction: row; /* Que las imágenes estén en fila */
     gap: 10px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centra las imágenes en el contenedor */
-    align-items: center;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center; 
 }
 
-.image-link img {
-    width: 88px;
-    height: 31px;
-    border: 0;
+.image-link img { /* Estilo de las imágenes dentro de los enlaces */
+    width: 88px; /* Ancho */
+    height: 31px; /* Alto */
+    border: 0; /* Borde */
 }
